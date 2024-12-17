@@ -1,0 +1,17 @@
+- hosts: all
+  vars:
+    # Replace by users that should use microK8S on your target computer.
+    users:
+      - "ubuntu"
+    # awx initial password
+    # yeah, plaintext - not optimal for production
+    # but this is testing! For prod, the string would be at least encrypted by ansible-vault, 
+    # or it would be stored elsewhere.
+    awx_password: "Passw0rd!"
+  roles: 
+    - role: istvano.microk8s
+      become: true
+    - role: awx_k8s_install
+      become: true
+      
+   

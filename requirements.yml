@@ -1,0 +1,5 @@
+- name: istvano.microk8s
+
+- name: awx_k8s_install
+  src: https://github.com/davidkarban/awx_k8s_install.git
+ 
